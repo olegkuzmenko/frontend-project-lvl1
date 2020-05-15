@@ -1,0 +1,10 @@
+name: LintCheck
+on: [push]
+
+jobs: 
+  built:
+    name: Make Check
+    runs-on: ubuntu-latest
+    steps:
+      - run: make make lint
+
