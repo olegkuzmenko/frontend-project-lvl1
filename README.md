@@ -9,6 +9,6 @@
 </a>
 
 <a href="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv">
-  <video src="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv" art="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv">
-</video>
+  <video src="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv" alt="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv">
+  </video>
 </a>
