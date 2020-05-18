@@ -11,15 +11,15 @@ export const getAnswer = (integer) => {
   return answer;
 };
 
-export const wrongAnswerReport = (str, name) => {
+export const wrongAnswerReport = (str, name, rightAnswer) => {
   const currentAnswer = str;
   let oppositeAnswer = '';
-  const userName = name;
-  if (currentAnswer === 'yes') {
-    oppositeAnswer = 'no';
-  } else {
+  if (rightAnswer) {
     oppositeAnswer = 'yes';
+  } else {
+    oppositeAnswer = 'no';
   }
+  const userName = name;
   console.log(`"${currentAnswer}" is wrong answer ;(. Correct answer was "${oppositeAnswer}".
   Let's try again, ${userName}`);
 };
@@ -59,7 +59,7 @@ export const roundGame = (counter, userName) => {
     const statusOfAnswer = checkAnswer(answer, rightAnswer);
 
     if (statusOfAnswer !== true) {
-      return wrongAnswerReport(answer, userName);
+      return wrongAnswerReport(answer, userName, rightAnswer);
     }
     console.log('Correct!');
     return roundGame(counter - 1, userName);
