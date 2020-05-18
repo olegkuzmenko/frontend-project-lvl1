@@ -26,8 +26,12 @@ export const wrongAnswerReport = (str, name) => {
 
 
 export const checkAnswer = (str, boolean) => {
-  const booleanAnswer = true;
-  if (str === 'no') {
+  const answers = ['yes', 'no'];
+  if (!answers.includes(str)) {
+    return false;
+  };
+  let booleanAnswer = true;
+  if (str !== 'yes') {
     booleanAnswer = false;
   }
   return booleanAnswer === boolean ? true : false;
@@ -54,10 +58,11 @@ export const roundGame = (counter, userName) => {
 
     const statusOfAnswer = checkAnswer(answer, rightAnswer);
 
-    if (statusOfAnswer === true) {
-      console.log('Correct!');
-      return roundGame(counter - 1);
+    if (statusOfAnswer !== true) {
+      return wrongAnswerReport(answer, userName);
     }
-    return wrongAnswerReport(answer, userName);
+    console.log('Correct!');
+    return roundGame(counter - 1);
   }
+  console.log(`Congratulation, ${userName}!`);
 };
