@@ -8,8 +8,3 @@ const userName = askUserName();
 const counter = 3;
 
 roundGame(counter, userName);
-
-
-
-
-
