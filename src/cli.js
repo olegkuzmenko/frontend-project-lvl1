@@ -13,7 +13,7 @@ export const getAnswer = (integer) => {
 
 export const wrongAnswerReport = (str, name) => {
   const currentAnswer = str;
-  const oppositeAnswer = '';
+  let oppositeAnswer = '';
   const userName = name;
   if (currentAnswer === 'yes') {
     oppositeAnswer = 'no';
@@ -21,7 +21,7 @@ export const wrongAnswerReport = (str, name) => {
     oppositeAnswer = 'yes';
   }
   console.log(`"${currentAnswer}" is wrong answer ;(. Correct answer was "${oppositeAnswer}".
-  Let's try again, ${userName}`)
+  Let's try again, ${userName}`);
 };
 
 
@@ -29,12 +29,12 @@ export const checkAnswer = (str, boolean) => {
   const answers = ['yes', 'no'];
   if (!answers.includes(str)) {
     return false;
-  };
+  }
   let booleanAnswer = true;
   if (str !== 'yes') {
     booleanAnswer = false;
   }
-  return booleanAnswer === boolean ? true : false;
+  return booleanAnswer === boolean;
 };
 
 export const getRandomInteger = () => {
@@ -44,7 +44,7 @@ export const getRandomInteger = () => {
   return result;
 };
 
-export const isEven = (integer) => integer % 2 !== 0 ? false : true; 
+export const isEven = (integer) => (integer % 2 !== 0);
 
 export const roundGame = (counter, userName) => {
   if (counter > 0) {
@@ -54,7 +54,7 @@ export const roundGame = (counter, userName) => {
 
     const answer = getAnswer(currentNumber);
 
-    const rightAnswer = isEven(currentNumber)
+    const rightAnswer = isEven(currentNumber);
 
     const statusOfAnswer = checkAnswer(answer, rightAnswer);
 
