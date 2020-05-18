@@ -44,7 +44,7 @@ export const getRandomInteger = () => {
   return result;
 };
 
-export const isEven = (integer) => (integer % 2 !== 0);
+export const isEven = (integer) => (integer % 2 === 0);
 
 export const roundGame = (counter, userName) => {
   if (counter > 0) {
