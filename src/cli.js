@@ -62,7 +62,7 @@ export const roundGame = (counter, userName) => {
       return wrongAnswerReport(answer, userName);
     }
     console.log('Correct!');
-    return roundGame(counter - 1);
+    return roundGame(counter - 1, userName);
   }
-  console.log(`Congratulation, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
