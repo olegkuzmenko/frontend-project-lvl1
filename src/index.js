@@ -57,6 +57,6 @@ export const getRandomExpression = () => {
     answer = firstNumber * secondNumber;
   }
   answers.expression = randomExpression;
-  answers.answer = answer;
+  answers.answer = String(answer);
   return answers;
 };
