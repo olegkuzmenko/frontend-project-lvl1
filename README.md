@@ -8,8 +8,10 @@
   <img src="https://github.com/olegkuzmenko/frontend-project-lvl1/workflows/StartLint/badge.svg" />
 </a>
 
+<h3>How to install games and play Brain Even:</h3>
 https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv
-<a href="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv">
-  <video src="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv" alt="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv">
-  </video>
-</a>
+
+
+
+<h3>How to play Brain Calc:</h3>
+https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF
