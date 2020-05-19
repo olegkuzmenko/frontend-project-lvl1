@@ -1,5 +1,5 @@
 import {
-  checkAnswerBoolean, getRandomInteger, getAnswer, isEven, wrongAnswerReport,
+  checkAnswerString, getRandomInteger, getAnswer, isEven, wrongAnswerReport,
 } from '../index.js';
 
 const gameBrainEven = (counter, userName) => {
@@ -12,7 +12,7 @@ const gameBrainEven = (counter, userName) => {
 
     const rightAnswer = isEven(currentNumber);
 
-    const statusOfAnswer = checkAnswerBoolean(userAnswer, rightAnswer);
+    const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
 
     if (statusOfAnswer !== true) {
       return wrongAnswerReport(userAnswer, userName, rightAnswer);
