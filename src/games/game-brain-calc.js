@@ -1,7 +1,6 @@
 import {
   checkAnswerInteger, getRandomExpression, getAnswer, wrongAnswerReport,
 } from '../index.js';
-import gameBrainEven from './game-brain-even.js';
 
 const gameBrainCalc = (counter, userName) => {
   if (counter > 0) {
@@ -17,7 +16,7 @@ const gameBrainCalc = (counter, userName) => {
       return wrongAnswerReport(userAnswer, userName, randomeExpression.answer);
     }
     console.log('Correct!');
-    return gameBrainEven(counter - 1, userName);
+    return gameBrainCalc(counter - 1, userName);
   }
   console.log(`Congratulations, ${userName}!`);
 };
