@@ -1,22 +1,21 @@
 import {
-  checkAnswer, getRandomInteger, getAnswer, isEven, wrongAnswerReport,
-} from '../cli.js';
-
+  checkAnswerBoolean, getRandomInteger, getAnswer, isEven, wrongAnswerReport,
+} from '../index.js';
 
 const gameBrainEven = (counter, userName) => {
   if (counter > 0) {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-    const currentNumber = getRandomInteger();
+    const currentNumber = getRandomInteger(1, 100);
 
-    const answer = getAnswer(currentNumber);
+    const userAnswer = getAnswer(currentNumber);
 
     const rightAnswer = isEven(currentNumber);
 
-    const statusOfAnswer = checkAnswer(answer, rightAnswer);
+    const statusOfAnswer = checkAnswerBoolean(userAnswer, rightAnswer);
 
     if (statusOfAnswer !== true) {
-      return wrongAnswerReport(answer, userName, rightAnswer);
+      return wrongAnswerReport(userAnswer, userName, rightAnswer);
     }
     console.log('Correct!');
     return gameBrainEven(counter - 1, userName);
