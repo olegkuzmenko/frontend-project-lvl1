@@ -2,7 +2,7 @@ import {
   getTwoRandomIntegers, getGreatestCommonDevisor, checkAnswerInteger, getAnswer, wrongAnswerReport, 
 } from '../index.js';
 
-const gameBrainGcd = (counter, askUserName) => {
+const gameBrainGcd = (counter, userName) => {
   if (counter > 0) {
     console.log('Find the greatest common divisor of given numbers.');
 
