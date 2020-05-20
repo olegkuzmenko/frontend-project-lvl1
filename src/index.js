@@ -60,3 +60,28 @@ export const getRandomExpression = () => {
   answers.answer = String(answer);
   return answers;
 };
+
+export const getTwoRandomIntegers = () => {
+  const twoRandomIntegers = {};
+  twoRandomIntegers.first = getRandomInteger(1, 100);
+  twoRandomIntegers.second = getRandomInteger(1, 100);
+  return twoRandomIntegers;
+}
+
+export const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
+  let devisor = 0;
+  if (firstNumber === secondNumber) {
+    return firstNumber;
+  }
+  if (firstNumber > secondNumber) {
+    devisor = secondNumber;
+  } else {
+    devisor = firstNumber;
+  }
+
+  for (let gratestDevisor = devisor; gratestDevisor > 0; gratestDevisor -= 1) {
+    if (firstNumber % gratestDevisor === 0 && secondNumber % gratestDevisor === 0) {
+      return String(gratestDevisor);
+    } 
+  }
+};
