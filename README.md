@@ -15,3 +15,7 @@ https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv
 
 <h3>How to play Brain Calc:</h3>
 https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF
+
+
+<h3>How to play Brain GCD:</h3>
+https://asciinema.org/connect/bba04022-8439-40fa-8b39-3d2849d42bf7
