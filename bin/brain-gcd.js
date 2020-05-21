@@ -7,4 +7,6 @@ console.log('Welcome to the Brain Games!');
 
 const userName = askUserName();
 
+console.log('Find the greatest common divisor of given numbers.');
+
 threeRoundGame(gameBrainGcd, userName);

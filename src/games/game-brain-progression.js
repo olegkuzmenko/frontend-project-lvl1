@@ -1,11 +1,9 @@
 import {
-  getProgression, checkAnswerInteger, getAnswer, wrongAnswerReport, 
+  getProgression, checkAnswerInteger, getAnswer, wrongAnswerReport,
 } from '../index.js';
 
 const gameBrainProgression = (counter, userName) => {
   if (counter > 0) {
-    console.log('What number is missing in the progression?');
-
     const result = getProgression();
 
     const userAnswer = getAnswer(result.progression);

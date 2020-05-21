@@ -7,4 +7,6 @@ console.log('Welcome to the Brain Games!');
 
 const userName = askUserName();
 
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
 threeRoundGame(gameBrainEven, userName);

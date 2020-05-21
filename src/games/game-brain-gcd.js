@@ -1,9 +1,8 @@
 import {
-  getTwoRandomIntegers, getGreatestCommonDevisor, checkAnswerInteger, getAnswer, wrongAnswerReport, 
+  getTwoRandomIntegers, getGreatestCommonDevisor, checkAnswerInteger, getAnswer, wrongAnswerReport,
 } from '../index.js';
 
 const gameBrainGcd = (counter, userName) => {
-  console.log('Find the greatest common divisor of given numbers.');
   if (counter > 0) {
     const twoRandomIntegers = getTwoRandomIntegers();
 
