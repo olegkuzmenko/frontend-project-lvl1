@@ -9,13 +9,17 @@
 </a>
 
 <h3>How to install games and play Brain Even:</h3>
-https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv
+<a href="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv" target="_blank"><img src="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv.svg" /></a>
 
 
 
 <h3>How to play Brain Calc:</h3>
-https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF
+<a href="https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF" target="_blank"><img src="https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF.svg" /></a>
 
 
 <h3>How to play Brain GCD:</h3>
-https://asciinema.org/connect/bba04022-8439-40fa-8b39-3d2849d42bf7
+<a href="https://asciinema.org/a/DoO9OkzczFGi3aqxC8B3UfxiI" target="_blank"><img src="https://asciinema.org/a/DoO9OkzczFGi3aqxC8B3UfxiI.svg" /></a>
+
+
+<h3>How to play Brain Progression:</h3>
+<a href="https://asciinema.org/a/wdNdnSnyH3M7V7EOfX9WBuVOh" target="_blank"><img src="https://asciinema.org/a/wdNdnSnyH3M7V7EOfX9WBuVOh.svg" /></a>
