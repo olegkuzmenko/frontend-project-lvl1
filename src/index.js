@@ -87,22 +87,36 @@ export const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
 };
 
 export const getProgression = () => {
-  const step = getRandomInteger(1,10);
+  const step = getRandomInteger(1, 10);
   const largeProgression = [];
-  let smallProgression = []
+  let smallProgression = [];
   let hiddenElementIndex = 0;
   let hiddenElement = 0;
   const result = {};
   for (let i = 0; i <= 100; i += step) {
     largeProgression.push(i);
   }
-  const begin = getRandomInteger(0,largeProgression.length - 10);
+  const begin = getRandomInteger(0, largeProgression.length - 10);
   const end = begin + 10;
   smallProgression = largeProgression.slice(begin, end);
-  hiddenElementIndex = getRandomInteger(1, 10)
+  hiddenElementIndex = getRandomInteger(1, 10);
   hiddenElement = smallProgression[hiddenElementIndex];
   smallProgression[hiddenElementIndex] = '..';
   result.progression = smallProgression.join(' ');
   result.element = String(hiddenElement);
   return result;
-}
+};
+
+export const predicatToString = (boolean) => (boolean ? 'yes' : 'no');
+
+export const isPrime = (integer) => {
+  if (integer === 2) {
+    return true;
+  }
+  for (let i = 2; i < integer; i += 1) {
+    if (integer % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
