@@ -7,4 +7,6 @@ console.log('Welcome to the Brain Games!');
 
 const userName = askUserName();
 
+console.log('What is the result of the expression?');
+
 threeRoundGame(gameBrainCalc, userName);

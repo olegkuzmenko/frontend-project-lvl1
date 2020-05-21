@@ -3,8 +3,8 @@ import {
 } from '../index.js';
 
 const gameBrainEven = (counter, userName) => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   if (counter > 0) {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
     const currentNumber = getRandomInteger(1, 100);
 

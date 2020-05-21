@@ -4,8 +4,6 @@ import {
 
 const gameBrainCalc = (counter, userName) => {
   if (counter > 0) {
-    console.log('What is the result of the expression?');
-
     const randomeExpression = getRandomExpression();
 
     const userAnswer = getAnswer(randomeExpression.expression);

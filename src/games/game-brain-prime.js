@@ -3,8 +3,9 @@ import {
 } from '../index.js';
 
 const gameBrainPrime = (counter, userName) => {
+  console.log('Answer "yes" if the number is prime, otherwise answer "no".');
+
   if (counter > 0) {
-    console.log('Answer "yes" if the number is prime, otherwise answer "no".');
 
     const currentNumber = getRandomInteger(1, 1000);
 

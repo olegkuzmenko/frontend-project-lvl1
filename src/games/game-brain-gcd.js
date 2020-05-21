@@ -3,9 +3,8 @@ import {
 } from '../index.js';
 
 const gameBrainGcd = (counter, userName) => {
+  console.log('Find the greatest common divisor of given numbers.');
   if (counter > 0) {
-    console.log('Find the greatest common divisor of given numbers.');
-
     const twoRandomIntegers = getTwoRandomIntegers();
 
     const { first, second } = twoRandomIntegers;
