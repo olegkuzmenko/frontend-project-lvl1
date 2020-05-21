@@ -1,5 +1,5 @@
 import {
-  checkAnswerString, getRandomInteger, getAnswer, isEven, wrongAnswerReport,
+  checkAnswerString, getRandomInteger, getAnswer, isEven, wrongAnswerReport, predicatToString,
 } from '../index.js';
 
 const gameBrainEven = (counter, userName) => {
@@ -8,7 +8,7 @@ const gameBrainEven = (counter, userName) => {
 
     const userAnswer = getAnswer(currentNumber);
 
-    const rightAnswer = isEven(currentNumber);
+    const rightAnswer = predicatToString(isEven(currentNumber));
 
     const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
 

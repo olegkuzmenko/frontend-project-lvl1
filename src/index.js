@@ -32,7 +32,7 @@ export const getRandomInteger = (min, max) => {
   return result;
 };
 
-export const isEven = (integer) => (integer % 2 === 0 ? 'yes' : 'no');
+export const isEven = (integer) => (integer % 2 === 0);
 
 export const threeRoundGame = (foo, userName) => foo(3, userName);
 
@@ -66,7 +66,7 @@ export const getTwoRandomIntegers = () => {
   twoRandomIntegers.first = getRandomInteger(1, 100);
   twoRandomIntegers.second = getRandomInteger(1, 100);
   return twoRandomIntegers;
-}
+};
 
 export const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
   let devisor = 0;
@@ -82,7 +82,7 @@ export const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
   for (let gratestDevisor = devisor; gratestDevisor > 0; gratestDevisor -= 1) {
     if (firstNumber % gratestDevisor === 0 && secondNumber % gratestDevisor === 0) {
       return String(gratestDevisor);
-    } 
+    }
   }
 };
 
