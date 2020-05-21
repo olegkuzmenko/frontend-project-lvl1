@@ -9,17 +9,23 @@
 </a>
 
 <h3>How to install games and play Brain Even:</h3>
-<a href="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv" target="_blank"><img src="https://asciinema.org/a/fIgOmr0FIaekZwrPxYuwG25uv.svg" /></a>
+<a href="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG" target="_blank"><img src="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG.svg" /></a>
 
 
 
 <h3>How to play Brain Calc:</h3>
-<a href="https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF" target="_blank"><img src="https://asciinema.org/a/lHPEmWE3avRcvbIvVlnrz0nrF.svg" /></a>
+<a href="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn" target="_blank"><img src="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn.svg" /></a>
 
 
 <h3>How to play Brain GCD:</h3>
-<a href="https://asciinema.org/a/DoO9OkzczFGi3aqxC8B3UfxiI" target="_blank"><img src="https://asciinema.org/a/DoO9OkzczFGi3aqxC8B3UfxiI.svg" /></a>
+<a href="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd" target="_blank"><img src="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd.svg" /></a>
 
 
 <h3>How to play Brain Progression:</h3>
-<a href="https://asciinema.org/a/wdNdnSnyH3M7V7EOfX9WBuVOh" target="_blank"><img src="https://asciinema.org/a/wdNdnSnyH3M7V7EOfX9WBuVOh.svg" /></a>
+<a href="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S" target="_blank"><img src="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S.svg" /></a>
+
+<h3>How to play Brain Prime:</h3>
+<a href="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW" target="_blank"><img src="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW.svg" /></a>
+
+
+
