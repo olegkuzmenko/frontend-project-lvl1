@@ -17,6 +17,12 @@ const startGame = () => {
   return userName;
 };
 
+export const chooseGameRules = (gameName) => {
+  if (gameName === 'even') {
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+  }
+};
+
 export const getRandomInteger = (min, max) => {
   const result = Math.floor(Math.random() * (max - min)) + min;
   return result;
@@ -46,13 +52,16 @@ export const rightAnswerReport = () => console.log('Correct!');
 
 export const winningReport = (userName) => console.log(`Congratulations, ${userName}!`);
 
-export const printGameRules = (gameRules) => (gameRules);
+export const printGameRules = (gameRules) => console.log(gameRules);
 
-export const gameEngine = (howManyRounds, gameRules, rightAnswer, userAnswer, statusOfAnswer) => {
+export const gameEngine = (game, howManyRounds, gameName) => {
   const userName = startGame();
-  printGameRules(gameRules);
+  chooseGameRules(gameName);
+  let results = [];
   let gameResult = true;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
+    results = game();
+    const [userAnswer, rightAnswer, statusOfAnswer] = results;
     gameResult = statusOfAnswer;
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
