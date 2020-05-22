@@ -17,6 +17,11 @@ const startGame = () => {
   return userName;
 };
 
+export const getRandomInteger = (min, max) => {
+  const result = Math.floor(Math.random() * (max - min)) + min;
+  return result;
+};
+
 export const getAnswer = (expression) => {
   const answer = readlineSync.question(`Question: ${expression}\nYour answer: `);
   return answer;
