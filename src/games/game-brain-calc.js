@@ -1,6 +1,6 @@
 import {
   checkAnswerInteger, getRandomExpression, getAnswer, wrongAnswerReport,
-} from '../index.js';
+} from '../index_old.js';
 
 const gameBrainCalc = (counter, userName) => {
   if (counter > 0) {

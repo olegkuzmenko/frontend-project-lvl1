@@ -1,24 +1,24 @@
 import {
-  checkAnswerString, getRandomInteger, getAnswer, isEven, wrongAnswerReport, predicatToString,
+  getRandomInteger, getAnswer, predicatToString, printGameRules, checkAnswerString,
 } from '../index.js';
 
-const gameBrainEven = (counter, userName) => {
-  if (counter > 0) {
-    const currentNumber = getRandomInteger(1, 100);
+const isEven = (integer) => (integer % 2 === 0);
 
-    const userAnswer = getAnswer(currentNumber);
+const evenGameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-    const rightAnswer = predicatToString(isEven(currentNumber));
+const gameBrainEven = () => {
+  printGameRules(evenGameRules);
 
-    const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
+  const currentNumber = getRandomInteger(1, 100);
+  const userAnswer = getAnswer(currentNumber);
+  const rightAnswer = predicatToString(isEven(currentNumber));
+  const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
 
-    if (statusOfAnswer !== true) {
-      return wrongAnswerReport(userAnswer, userName, rightAnswer);
-    }
-    console.log('Correct!');
-    return gameBrainEven(counter - 1, userName);
-  }
-  console.log(`Congratulations, ${userName}!`);
+  const result = {};
+  result.userAnswer = userAnswer;
+  result.rightAnswer = rightAnswer;
+  result.statusOfAnswer = statusOfAnswer;
+  return result;
 };
 
 export default gameBrainEven;

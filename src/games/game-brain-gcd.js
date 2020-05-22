@@ -1,6 +1,6 @@
 import {
   getTwoRandomIntegers, getGreatestCommonDevisor, checkAnswerInteger, getAnswer, wrongAnswerReport,
-} from '../index.js';
+} from '../index_old.js';
 
 const gameBrainGcd = (counter, userName) => {
   if (counter > 0) {
