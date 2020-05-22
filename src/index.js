@@ -58,7 +58,7 @@ export const gameEngine = (game, howManyRounds, gameName) => {
   let results = [];
   let gameResult = true;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    results = game();
+    results = game;
     const [userAnswer, rightAnswer, statusOfAnswer] = results;
     gameResult = statusOfAnswer;
     if (gameResult !== true) {
