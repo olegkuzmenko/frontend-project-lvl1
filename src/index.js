@@ -52,8 +52,6 @@ export const rightAnswerReport = () => console.log('Correct!');
 
 export const winningReport = (userName) => console.log(`Congratulations, ${userName}!`);
 
-export const printGameRules = (gameRules) => console.log(gameRules);
-
 export const gameEngine = (game, howManyRounds, gameName) => {
   const userName = startGame();
   chooseGameRules(gameName);
