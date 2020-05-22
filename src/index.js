@@ -48,14 +48,13 @@ export const winningReport = (userName) => console.log(`Congratulations, ${userN
 
 export const printGameRules = (gameRules) => console.log(gameRules);
 
-export const gameEngine = (game) => {
+export const gameEngine = (game, howManyRounds) => {
   const userName = startGame();
-  const howManyRounds = 3;
-  let results = {};
+  let results = [];
   let gameResult = true;
-  for (let i = howManyRounds; i > 0 || gameResult === true; i -= 1) {
+  for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
     results = game();
-    const { userAnswer, rightAnswer, statusOfAnswer } = results;
+    const [userAnswer, rightAnswer, statusOfAnswer] = results;
     gameResult = statusOfAnswer;
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);

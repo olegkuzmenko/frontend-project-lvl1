@@ -14,11 +14,11 @@ const gameBrainEven = () => {
   const rightAnswer = predicatToString(isEven(currentNumber));
   const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
 
-  const result = {};
-  result.userAnswer = userAnswer;
-  result.rightAnswer = rightAnswer;
-  result.statusOfAnswer = statusOfAnswer;
-  return result;
+  const results = [];
+  results[0] = userAnswer;
+  results[1] = rightAnswer;
+  results[2] = statusOfAnswer;
+  return results;
 };
 
 export default gameBrainEven;
