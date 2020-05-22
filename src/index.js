@@ -46,15 +46,13 @@ export const rightAnswerReport = () => console.log('Correct!');
 
 export const winningReport = (userName) => console.log(`Congratulations, ${userName}!`);
 
-export const printGameRules = (gameRules) => console.log(gameRules);
+export const printGameRules = (gameRules) => (gameRules);
 
-export const gameEngine = (game, howManyRounds) => {
+export const gameEngine = (howManyRounds, gameRules, rightAnswer, userAnswer, statusOfAnswer) => {
   const userName = startGame();
-  let results = [];
+  printGameRules(gameRules);
   let gameResult = true;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    results = game();
-    const [userAnswer, rightAnswer, statusOfAnswer] = results;
     gameResult = statusOfAnswer;
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
