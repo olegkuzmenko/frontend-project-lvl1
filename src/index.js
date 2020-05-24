@@ -58,7 +58,7 @@ export const gameEngine = (gameRules, whatToAsk, rightAnswer) => {
     const userAnswer = getAnswer(currentValue);
     gameResult = checkAnswerString(userAnswer, rightAnswer(currentValue));
     if (gameResult !== true) {
-      wrongAnswerReport(userAnswer, userName, rightAnswer());
+      wrongAnswerReport(userAnswer, userName, rightAnswer(currentValue));
       return;
     }
     rightAnswerReport();
