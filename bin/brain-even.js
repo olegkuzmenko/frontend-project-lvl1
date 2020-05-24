@@ -5,6 +5,6 @@ import gameBrainEven from '../src/games/game-brain-even.js';
 
 const gameName = 'even';
 const howManyRounds = 3;
-const game = gameBrainEven();
 
-gameEngine(game, howManyRounds, gameName);
+
+gameEngine(gameBrainEven, howManyRounds, gameName);
