@@ -1,18 +1,14 @@
 import {
-  getRandomInteger, getAnswer, predicatToString,
+  getRandomInteger, predicatToString, gameEngine,
 } from '../index.js';
 
 const isEven = (integer) => (integer % 2 === 0);
 
 const gameBrainEven = () => {
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
   const currentNumber = getRandomInteger(1, 100);
-  const userAnswer = getAnswer(currentNumber);
   const rightAnswer = predicatToString(isEven(currentNumber));
-
-  const answers = [];
-  answers[0] = userAnswer;
-  answers[1] = rightAnswer;
-  return answers;
+  gameEngine(gameRules, currentNumber, rightAnswer);
 };
 
 export default gameBrainEven;
