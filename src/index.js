@@ -57,7 +57,7 @@ export const gameEngine = (gameFunc, howManyRounds, gameName) => {
   chooseGameRules(gameName);
   let gameResult = true;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    const [userAnswer, rightAnswer] = gameFunc;
+    const [userAnswer, rightAnswer] = gameFunc();
     gameResult = checkAnswerString(userAnswer, rightAnswer);
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
