@@ -33,14 +33,6 @@ export const getAnswer = (expression) => {
   return answer;
 };
 
-export const checkAnswerString = (userAnswer, rightAnswer) => {
-  const answers = ['yes', 'no'];
-  if (!answers.includes(userAnswer)) {
-    return false;
-  }
-  return userAnswer === rightAnswer;
-};
-
 export const wrongAnswerReport = (userAnswer, userName, rightAnswer) => {
   console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".
   Let's try again, ${userName}`);
@@ -52,15 +44,21 @@ export const rightAnswerReport = () => console.log('Correct!');
 
 export const winningReport = (userName) => console.log(`Congratulations, ${userName}!`);
 
-export const gameEngine = (game, howManyRounds, gameName) => {
+export const checkAnswerString = (userAnswer, rightAnswer) => {
+  const answers = ['yes', 'no'];
+  if (!answers.includes(userAnswer)) {
+    return false;
+  }
+  return userAnswer === rightAnswer;
+};
+
+export const gameEngine = (gameFunc, howManyRounds, gameName) => {
   const userName = startGame();
   chooseGameRules(gameName);
-  let results = [];
   let gameResult = true;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    results = game;
-    const [userAnswer, rightAnswer, statusOfAnswer] = results;
-    gameResult = statusOfAnswer;
+    const [userAnswer, rightAnswer] = gameFunc;
+    gameResult = checkAnswerString(userAnswer, rightAnswer);
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
       return;
