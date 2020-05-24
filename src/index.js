@@ -51,10 +51,10 @@ export const checkAnswerString = (userAnswer, rightAnswer) => {
 export const gameEngine = (gameRules, currentNumber, rightAnswer) => {
   const userName = startGame();
   printGameRules(gameRules);
-  const userAnswer = getAnswer(currentNumber);
   let gameResult = true;
   const howManyRounds = 3;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
+    const userAnswer = getAnswer(currentNumber);
     gameResult = checkAnswerString(userAnswer, rightAnswer);
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
