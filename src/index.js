@@ -41,7 +41,7 @@ export const checkAnswerString = (userAnswer, rightAnswer) => {
   return userAnswer === rightAnswer;
 };
 
-export const gameEngine = (gameRules, valueToAsk, rightAnswer) => {
+export const gameEngine = (gameRules, game) => {
   const userName = startGame();
   printGameRules(gameRules);
   let gameResult = true;
