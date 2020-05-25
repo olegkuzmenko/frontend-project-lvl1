@@ -47,11 +47,13 @@ export const gameEngine = (gameRules, valueToAsk, rightAnswer) => {
   let gameResult = true;
   const howManyRounds = 3;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    const currentValue = valueToAsk();
+    const values = game();
+    const currentValue = values.expression;
     const userAnswer = getAnswer(currentValue);
-    gameResult = checkAnswerString(userAnswer, rightAnswer(currentValue));
+    const rightAnswer = values.answer;
+    gameResult = checkAnswerString(userAnswer, rightAnswer);
     if (gameResult !== true) {
-      wrongAnswerReport(userAnswer, userName, rightAnswer(currentValue));
+      wrongAnswerReport(userAnswer, userName, rightAnswer);
       return;
     }
     rightAnswerReport();
