@@ -19,11 +19,6 @@ const startGame = () => {
 
 const printGameRules = (gameRules) => console.log(gameRules);
 
-export const getRandomInteger = (min, max) => {
-  const result = Math.floor(Math.random() * (max - min)) + min;
-  return result;
-};
-
 export const getAnswer = (expression) => {
   const answer = readlineSync.question(`Question: ${expression}\nYour answer: `);
   return answer;
@@ -33,8 +28,6 @@ export const wrongAnswerReport = (userAnswer, userName, rightAnswer) => {
   console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".
   Let's try again, ${userName}`);
 };
-
-export const predicatToString = (boolean) => (boolean ? 'yes' : 'no');
 
 export const rightAnswerReport = () => console.log('Correct!');
 
@@ -48,13 +41,13 @@ export const checkAnswerString = (userAnswer, rightAnswer) => {
   return userAnswer === rightAnswer;
 };
 
-export const gameEngine = (gameRules, whatToAsk, rightAnswer) => {
+export const gameEngine = (gameRules, valueToAsk, rightAnswer) => {
   const userName = startGame();
   printGameRules(gameRules);
   let gameResult = true;
   const howManyRounds = 3;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
-    const currentValue = whatToAsk();
+    const currentValue = valueToAsk();
     const userAnswer = getAnswer(currentValue);
     gameResult = checkAnswerString(userAnswer, rightAnswer(currentValue));
     if (gameResult !== true) {

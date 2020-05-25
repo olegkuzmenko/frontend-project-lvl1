@@ -1,22 +1,37 @@
-import {
-  checkAnswerInteger, getRandomExpression, getAnswer, wrongAnswerReport,
-} from '../index_old.js';
 
-const gameBrainCalc = (counter, userName) => {
-  if (counter > 0) {
-    const randomeExpression = getRandomExpression();
+import { gameEngine } from '../index.js';
+import { getRandomInteger } from '../utils.js';
 
-    const userAnswer = getAnswer(randomeExpression.expression);
-
-    const statusOfAnswer = checkAnswerInteger(userAnswer, randomeExpression.answer);
-
-    if (statusOfAnswer !== true) {
-      return wrongAnswerReport(userAnswer, userName, randomeExpression.answer);
-    }
-    console.log('Correct!');
-    return gameBrainCalc(counter - 1, userName);
+export const getRandomExpression = () => {
+  const operators = ['+', '-', '*'];
+  const operator = operators[getRandomInteger(0, 3)];
+  const firstNumber = getRandomInteger(1, 100);
+  const secondNumber = getRandomInteger(1, 100);
+  let randomExpression = '';
+  let answer = 0;
+  const answers = {};
+  if (operator === '+') {
+    randomExpression = `${firstNumber} + ${secondNumber}`;
+    answer = firstNumber + secondNumber;
   }
-  console.log(`Congratulations, ${userName}!`);
+  if (operator === '-') {
+    randomExpression = `${firstNumber} - ${secondNumber}`;
+    answer = firstNumber - secondNumber;
+  }
+  if (operator === '*') {
+    randomExpression = `${firstNumber} * ${secondNumber}`;
+    answer = firstNumber * secondNumber;
+  }
+  answers.expression = randomExpression;
+  answers.answer = String(answer);
+  return answers;
+};
+
+const gameBrainCalc = () => {
+  const gameRules = 'What is the result of the expression?';
+  const valueToAsk = () => getRandomExpression().expression;
+  const rightAnswer = () => getRandomExpression().answer;
+  gameEngine(gameRules, valueToAsk, rightAnswer);
 };
 
 export default gameBrainCalc;
