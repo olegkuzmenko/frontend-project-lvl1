@@ -41,6 +41,8 @@ export const checkAnswerString = (userAnswer, rightAnswer) => {
   return userAnswer === rightAnswer;
 };
 
+export const checkAnswer = (userAnswer, rightAnswer) => userAnswer === rightAnswer;
+
 export const gameEngine = (gameRules, game) => {
   const userName = startGame();
   printGameRules(gameRules);
@@ -48,10 +50,10 @@ export const gameEngine = (gameRules, game) => {
   const howManyRounds = 3;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
     const values = game();
-    const currentValue = values.expression;
+    const currentValue = values[0];
     const userAnswer = getAnswer(currentValue);
-    const rightAnswer = values.answer;
-    gameResult = checkAnswerString(userAnswer, rightAnswer);
+    const rightAnswer = values[1];
+    gameResult = checkAnswer(userAnswer, rightAnswer);
     if (gameResult !== true) {
       wrongAnswerReport(userAnswer, userName, rightAnswer);
       return;
