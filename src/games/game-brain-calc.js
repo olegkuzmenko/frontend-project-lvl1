@@ -11,10 +11,10 @@ const getOperator = (operators) => {
 };
 
 const getRandomExpression = (firstNumber, secondNumber, operator) => {
-  const values = []
+  const values = [];
   let expression = '';
   let answer = 0;
-  switch(operator) {
+  switch (operator) {
     case '+':
       expression = `${firstNumber} + ${secondNumber}`;
       answer = firstNumber + secondNumber;
@@ -22,8 +22,8 @@ const getRandomExpression = (firstNumber, secondNumber, operator) => {
     case '-':
       expression = `${firstNumber} - ${secondNumber}`;
       answer = firstNumber - secondNumber;
-      break
-    case '*':
+      break;
+    default:
       expression = `${firstNumber} * ${secondNumber}`;
       answer = firstNumber * secondNumber;
       break;

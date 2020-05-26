@@ -10,13 +10,6 @@ export const askUserName = () => {
 
 const sayHello = (userName) => console.log(`Hello ${userName}`);
 
-const startGame = () => {
-  sayWellcome();
-  const userName = askUserName();
-  sayHello(userName);
-  return userName;
-};
-
 const printGameRules = (gameRules) => console.log(gameRules);
 
 export const getAnswer = (expression) => {
@@ -44,7 +37,9 @@ export const checkAnswerString = (userAnswer, rightAnswer) => {
 export const checkAnswer = (userAnswer, rightAnswer) => userAnswer === rightAnswer;
 
 export const gameEngine = (gameRules, game) => {
-  const userName = startGame();
+  sayWellcome();
+  const userName = askUserName();
+  sayHello(userName);
   printGameRules(gameRules);
   let gameResult = true;
   const howManyRounds = 3;

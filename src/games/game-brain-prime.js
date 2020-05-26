@@ -1,24 +1,29 @@
-import {
-  checkAnswerString, getRandomInteger, getAnswer, isPrime, wrongAnswerReport, predicatToString,
-} from '../index.js';
+import { gameEngine } from '../index.js';
+import { getRandomInteger, predicatToString } from '../utils.js';
 
-const gameBrainPrime = (counter, userName) => {
-  if (counter > 0) {
-    const currentNumber = getRandomInteger(1, 1000);
-
-    const userAnswer = getAnswer(currentNumber);
-
-    const rightAnswer = predicatToString(isPrime(currentNumber));
-
-    const statusOfAnswer = checkAnswerString(userAnswer, rightAnswer);
-
-    if (statusOfAnswer !== true) {
-      return wrongAnswerReport(userAnswer, userName, rightAnswer);
-    }
-    console.log('Correct!');
-    return gameBrainPrime(counter - 1, userName);
+const isPrime = (integer) => {
+  if (integer === 2) {
+    return true;
   }
-  console.log(`Congratulations, ${userName}!`);
+  for (let i = 2; i < integer; i += 1) {
+    if (integer % i === 0) {
+      return false;
+    }
+  }
+  return true;
+};
+
+const gameBrainPrime = () => {
+  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const game = () => {
+    const values = [];
+    const currentValue = getRandomInteger(1, 100);
+    const rightAnswer = predicatToString(isPrime(currentValue));
+    values[0] = currentValue;
+    values[1] = rightAnswer;
+    return values;
+  };
+  gameEngine(gameRules, game);
 };
 
 export default gameBrainPrime;

@@ -13,8 +13,8 @@ const gameBrainEven = () => {
     values[0] = currentValue;
     values[1] = rightAnswer;
     return values;
-  }
-  
+  };
+
   gameEngine(gameRules, game);
 };
 
