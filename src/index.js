@@ -1,59 +1,26 @@
 
 import readlineSync from 'readline-sync';
 
-export const sayWellcome = () => console.log('Welcome to the Brain Games!');
-
-export const askUserName = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  return userName;
-};
-
-const sayHello = (userName) => console.log(`Hello ${userName}`);
-
-const printGameRules = (gameRules) => console.log(gameRules);
-
-export const getAnswer = (expression) => {
-  const answer = readlineSync.question(`Question: ${expression}\nYour answer: `);
-  return answer;
-};
-
-export const wrongAnswerReport = (userAnswer, userName, rightAnswer) => {
-  console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".
-  Let's try again, ${userName}`);
-};
-
-export const rightAnswerReport = () => console.log('Correct!');
-
-export const winningReport = (userName) => console.log(`Congratulations, ${userName}!`);
-
-export const checkAnswerString = (userAnswer, rightAnswer) => {
-  const answers = ['yes', 'no'];
-  if (!answers.includes(userAnswer)) {
-    return false;
-  }
-  return userAnswer === rightAnswer;
-};
-
 export const checkAnswer = (userAnswer, rightAnswer) => userAnswer === rightAnswer;
 
 export const gameEngine = (gameRules, game) => {
-  sayWellcome();
-  const userName = askUserName();
-  sayHello(userName);
-  printGameRules(gameRules);
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello ${userName}`);
+  console.log(gameRules);
   let gameResult = true;
   const howManyRounds = 3;
   for (let i = howManyRounds; i > 0 && gameResult === true; i -= 1) {
     const values = game();
     const currentValue = values[0];
-    const userAnswer = getAnswer(currentValue);
+    const userAnswer = readlineSync.question(`Question: ${currentValue}\nYour answer: `);
     const rightAnswer = values[1];
     gameResult = checkAnswer(userAnswer, rightAnswer);
     if (gameResult !== true) {
-      wrongAnswerReport(userAnswer, userName, rightAnswer);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}". Let's try again, ${userName}`);
       return;
     }
-    rightAnswerReport();
+    console.log('Correct!');
   }
-  winningReport(userName);
+  console.log(`Congratulations, ${userName}!`);
 };
