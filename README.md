@@ -14,8 +14,7 @@
 **Brain Games** are five thrilling math games, that you can run right from the command line.
 
 **Evenness check** — answer, whether the proposed number is even or not.
-***
-How to install Brain Gameg and play Evenness check:
+#### How to install Brain Gameg and play Evenness check:
 <a href="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG" target="_blank"><img src="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG.svg" /></a>
 
 
@@ -40,7 +39,7 @@ How to install Brain Gameg and play Evenness check:
 
 
 ## Installation ##
-To install paste this code in the command line and press `Enter`:
+To install Brain Games,p aste this code in the command line and press `Enter`:
 
 ```npm install brain-games```
 
