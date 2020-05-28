@@ -1,37 +1,25 @@
-import { gameEngine } from '../index.js';
+import gameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 
 const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
-  let devisor = 0;
-  if (firstNumber === secondNumber) {
+  if (secondNumber === 0) {
     return firstNumber;
   }
-  if (firstNumber > secondNumber) {
-    devisor = secondNumber;
-  } else {
-    devisor = firstNumber;
-  }
-
-  while (!(firstNumber % devisor === 0 && secondNumber % devisor === 0)) {
-    devisor -= 1;
-  }
-  return String(devisor);
+  return getGreatestCommonDevisor(secondNumber, firstNumber % secondNumber);
 };
 
+const gameRule = 'Find the greatest common divisor of given numbers.';
+
 const gameBrainGcd = () => {
-  const gameRules = 'Find the greatest common divisor of given numbers.';
-  const game = () => {
-    const values = [];
+  const getRoundResults = () => {
     const firstNumber = getRandomInteger(1, 100);
     const secondNumber = getRandomInteger(1, 100);
     const currentValue = `${firstNumber} ${secondNumber}`;
-    const rightAnswer = getGreatestCommonDevisor(firstNumber, secondNumber);
-    values[0] = currentValue;
-    values[1] = rightAnswer;
-    return values;
+    const rightAnswer = String(getGreatestCommonDevisor(firstNumber, secondNumber));
+    return [currentValue, rightAnswer];
   };
-  gameEngine(gameRules, game);
+  gameEngine(gameRule, getRoundResults);
 };
 
 export default gameBrainGcd;

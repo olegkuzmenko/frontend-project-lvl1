@@ -1,7 +1,10 @@
-import { gameEngine } from '../index.js';
+import gameEngine from '../index.js';
 import { getRandomInteger, predicatToString } from '../utils.js';
 
 const isPrime = (integer) => {
+  if (integer < 2) {
+    return false;
+  }
   if (integer === 2) {
     return true;
   }
@@ -12,18 +15,15 @@ const isPrime = (integer) => {
   }
   return true;
 };
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const gameBrainPrime = () => {
-  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const game = () => {
-    const values = [];
+  const getRoundResults = () => {
     const currentValue = getRandomInteger(1, 100);
     const rightAnswer = predicatToString(isPrime(currentValue));
-    values[0] = currentValue;
-    values[1] = rightAnswer;
-    return values;
+    return [currentValue, rightAnswer];
   };
-  gameEngine(gameRules, game);
+  gameEngine(gameRule, getRoundResults);
 };
 
 export default gameBrainPrime;
