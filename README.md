@@ -10,8 +10,14 @@
 </a>
 
 
-## Discription
 **Brain Games** are five thrilling math games, that you can run right from the command line.
+
+## Installation ##
+To install Brain Games, cope the repository to your working directory, paste this code in the command line and then press `Enter`:
+
+```make start```
+
+## Discription
 
 **Evenness check** — answer, whether the proposed number is even or not.
 #### How to install Brain Gameg and play Evenness check:
@@ -37,11 +43,6 @@
 ##### How to play Prime or:
 <a href="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW" target="_blank"><img src="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW.svg" /></a>
 
-
-## Installation ##
-To install Brain Games,p aste this code in the command line and press `Enter`:
-
-```npm install brain-games```
 
 ## Software
 Brain Games uses the readlineSync library for interactive conversation with user.
