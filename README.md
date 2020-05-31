@@ -17,44 +17,45 @@ To install Brain Games, cope the repository to your working directory, paste thi
 
 ```make start```
 
+## Software
+
+You need `node.js` to run Brain Games (version — 14.x). 
+
+[How to install node.js](https://nodejs.org/en/download/package-manager/)
+
+Also you need `npm` to install Brain Games.
+
+[How to use and update npm](https://www.npmjs.com/get-npm)
+
+
 ## Discription
 
-**Evenness check** — answer, whether the proposed number is even or not.
-#### How to install Brain Gameg and play Evenness check:
+**Evenness check** — answer, whether the proposed number is even or not. To play Evennes check type `brain-even` in command line.
+
 <a href="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG" target="_blank"><img src="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG.svg" /></a>
 
 
-**Calculator** — do the math in your mind.
-#### How to play Calculator:
+**Calculator** — do the math in your mind. To play Calculator type `brain-calc` in command line.
+
 <a href="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn" target="_blank"><img src="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn.svg" /></a>
 
 
-**GCD** — find the greatest common devisor for two numbers.
-#### How to play GCD:
+**GCD** — find the greatest common devisor for two numbers. To play GCD type `brain-gcd` in command line.
+
 <a href="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd" target="_blank"><img src="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd.svg" /></a>
 
 
-**Progression** — answer, what number is missing in the arithmetic progression sequence.
-#### How to play Progression:
+**Progression** — answer, what number is missing in the arithmetic progression sequence. To play Progression type `brain-progression` in command line.
+
 <a href="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S" target="_blank"><img src="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S.svg" /></a>
 
 
-**Prime or not** — guess, if the number is prime, or not.
-##### How to play Prime or:
+**Prime or not** — guess, if the number is prime, or not. To play Prime or not type `brain-prime` in command line.
+
+
 <a href="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW" target="_blank"><img src="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW.svg" /></a>
 
 
-## Software
-Brain Games uses the readlineSync library for interactive conversation with user.
 
-Version — ^6.8.0.
-
-[readlineSync](https://github.com/anseki/readline-sync)
-
-You need node.js to run Brain Games.
-
-Version — 14.x.
-
-[node.js](https://nodejs.org/en/)
 
 
