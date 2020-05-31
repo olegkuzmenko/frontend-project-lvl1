@@ -2,32 +2,36 @@ import gameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 
-const generateProgression = (start, step, length) => {
-  const progression = [];
-  let number = start;
-  for (let i = 1; i <= length; i += 1) {
-    progression.push(number);
-    number += step;
+const generateProgression = (start, step, length, acc = []) => {
+  if (length === 0) {
+    return acc;
   }
-  return progression;
+  const item = start + step * (length - 1);
+  acc.unshift(item);
+  return generateProgression(start, step, length - 1, acc);
+};
+
+const hideProgressionElement = (progression, index = getRandomInteger(1, progression.length)) => {
+  const alteredProgression = [...progression];
+  const hiddenElement = progression[index];
+  alteredProgression[index] = '..';
+  return [alteredProgression, hiddenElement];
 };
 
 const gameRule = 'What number is missing in the progression?';
 
 const gameBrainProgression = () => {
-  const getRoundResults = () => {
+  const generateGameData = () => {
     const start = getRandomInteger(0, 100);
     const step = getRandomInteger(2, 10);
     const length = 10;
     const progression = generateProgression(start, step, length);
-    const hiddenElementIndex = getRandomInteger(1, length);
-    const hiddenElement = progression[hiddenElementIndex];
-    progression[hiddenElementIndex] = '..';
-    const currentValue = progression.join(' ');
+    const [alterdProgression, hiddenElement] = hideProgressionElement(progression);
+    const currentValue = alterdProgression.join(' ');
     const rightAnswer = String(hiddenElement);
     return [currentValue, rightAnswer];
   };
-  gameEngine(gameRule, getRoundResults);
+  gameEngine(gameRule, generateGameData);
 };
 
 export default gameBrainProgression;

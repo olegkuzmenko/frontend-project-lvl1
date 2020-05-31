@@ -12,14 +12,14 @@ const getGreatestCommonDevisor = (firstNumber, secondNumber) => {
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const gameBrainGcd = () => {
-  const getRoundResults = () => {
+  const generateGameData = () => {
     const firstNumber = getRandomInteger(1, 100);
     const secondNumber = getRandomInteger(1, 100);
     const currentValue = `${firstNumber} ${secondNumber}`;
     const rightAnswer = String(getGreatestCommonDevisor(firstNumber, secondNumber));
     return [currentValue, rightAnswer];
   };
-  gameEngine(gameRule, getRoundResults);
+  gameEngine(gameRule, generateGameData);
 };
 
 export default gameBrainGcd;

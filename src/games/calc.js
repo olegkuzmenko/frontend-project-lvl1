@@ -3,7 +3,7 @@ import gameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 
-const threeOperators = ['+', '-', '*'];
+const listOfOperators = ['+', '-', '*'];
 
 const getRandomOperator = (operators) => {
   const begin = 0;
@@ -11,34 +11,29 @@ const getRandomOperator = (operators) => {
   return operators[getRandomInteger(begin, end)];
 };
 
-const getRandomExpressionAnswer = (firstNumber, secondNumber, operator) => {
-  let answer = 0;
+const getExpressionResult = (firstNumber, secondNumber, operator) => {
   switch (operator) {
     case '+':
-      answer = firstNumber + secondNumber;
-      break;
+      return firstNumber + secondNumber;
     case '-':
-      answer = firstNumber - secondNumber;
-      break;
+      return firstNumber - secondNumber;
     default:
-      answer = firstNumber * secondNumber;
-      break;
+      return firstNumber * secondNumber;
   }
-  return answer;
 };
 
 const gameRule = 'What is the result of the expression?';
 
 const gameBrainCalc = () => {
-  const getRoundResults = () => {
+  const generateGameData = () => {
     const firstNumber = getRandomInteger(1, 100);
     const secondNumber = getRandomInteger(1, 100);
-    const operator = getRandomOperator(threeOperators);
-    const rightAnswer = String(getRandomExpressionAnswer(firstNumber, secondNumber, operator));
+    const operator = getRandomOperator(listOfOperators);
+    const rightAnswer = String(getExpressionResult(firstNumber, secondNumber, operator));
     const expression = `${firstNumber} ${operator} ${secondNumber}`;
     return [expression, rightAnswer];
   };
-  gameEngine(gameRule, getRoundResults);
+  gameEngine(gameRule, generateGameData);
 };
 
 export default gameBrainCalc;
