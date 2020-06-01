@@ -6,10 +6,10 @@ const gameEngine = (gameRule, generateGameData) => {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello ${userName}`);
   console.log(gameRule);
-  const howManyRounds = 3;
-  for (let i = howManyRounds; i > 0; i -= 1) {
+  for (let howManyRounds = 0; howManyRounds <= 3; howManyRounds += 1) {
     const [questionValue, rightAnswer] = generateGameData();
-    const userAnswer = readlineSync.question(`Question: ${questionValue}\nYour answer: `);
+    console.log(`Question: ${questionValue}`);
+    const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== rightAnswer) {
       console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
       console.log(`Let's try again, ${userName}`);

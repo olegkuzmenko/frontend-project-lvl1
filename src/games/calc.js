@@ -11,14 +11,16 @@ const getRandomOperator = (operators) => {
   return operators[getRandomInteger(begin, end)];
 };
 
-const getExpressionResult = (firstNumber, secondNumber, operator) => {
+const calculate = (firstNumber, secondNumber, operator) => {
   switch (operator) {
     case '+':
       return firstNumber + secondNumber;
     case '-':
       return firstNumber - secondNumber;
-    default:
+    case '*':
       return firstNumber * secondNumber;
+    default:
+      throw new Error('Wrong operator');
   }
 };
 
@@ -29,7 +31,7 @@ const gameBrainCalc = () => {
     const firstNumber = getRandomInteger(1, 100);
     const secondNumber = getRandomInteger(1, 100);
     const operator = getRandomOperator(listOfOperators);
-    const rightAnswer = String(getExpressionResult(firstNumber, secondNumber, operator));
+    const rightAnswer = String(calculate(firstNumber, secondNumber, operator));
     const expression = `${firstNumber} ${operator} ${secondNumber}`;
     return [expression, rightAnswer];
   };
