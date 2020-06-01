@@ -1,4 +1,4 @@
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 const generateProgression = (start, step, length) => {
@@ -34,4 +34,4 @@ const generateGameData = () => {
   return [currentValue, rightAnswer];
 };
 
-export default () => gameEngine(gameRule, generateGameData);
+export default () => runGameEngine(gameRule, generateGameData);

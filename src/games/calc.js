@@ -1,5 +1,5 @@
 
-import gameEngine from '../index.js';
+import runGameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 
@@ -26,16 +26,13 @@ const calculate = (firstNumber, secondNumber, operator) => {
 
 const gameRule = 'What is the result of the expression?';
 
-const gameBrainCalc = () => {
-  const generateGameData = () => {
-    const firstNumber = getRandomInteger(1, 100);
-    const secondNumber = getRandomInteger(1, 100);
-    const operator = getRandomOperator(listOfOperators);
-    const rightAnswer = String(calculate(firstNumber, secondNumber, operator));
-    const expression = `${firstNumber} ${operator} ${secondNumber}`;
-    return [expression, rightAnswer];
-  };
-  gameEngine(gameRule, generateGameData);
+const generateGameData = () => {
+  const firstNumber = getRandomInteger(1, 100);
+  const secondNumber = getRandomInteger(1, 100);
+  const operator = getRandomOperator(listOfOperators);
+  const rightAnswer = String(calculate(firstNumber, secondNumber, operator));
+  const expression = `${firstNumber} ${operator} ${secondNumber}`;
+  return [expression, rightAnswer];
 };
 
-export default gameBrainCalc;
+export default () => runGameEngine(gameRule, generateGameData);
