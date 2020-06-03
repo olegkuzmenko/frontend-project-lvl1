@@ -16,9 +16,9 @@ const isPrime = (integer) => {
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateGameData = () => {
-  const currentValue = getRandomInteger(1, 100);
-  const rightAnswer = predicatToString(isPrime(currentValue));
-  return [currentValue, rightAnswer];
+  const question = getRandomInteger(1, 100);
+  const rightAnswer = predicatToString(isPrime(question));
+  return [question, rightAnswer];
 };
 
 export default () => runGameEngine(gameRule, generateGameData);

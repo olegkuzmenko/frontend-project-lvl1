@@ -1,7 +1,5 @@
-
 import runGameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
-
 
 const listOfOperators = ['+', '-', '*'];
 
@@ -20,7 +18,7 @@ const calculate = (firstNumber, secondNumber, operator) => {
     case '*':
       return firstNumber * secondNumber;
     default:
-      throw new Error('Wrong operator');
+      throw new Error(`Unknown order state: ${operator}`);
   }
 };
 
@@ -31,8 +29,8 @@ const generateGameData = () => {
   const secondNumber = getRandomInteger(1, 100);
   const operator = getRandomOperator(listOfOperators);
   const rightAnswer = String(calculate(firstNumber, secondNumber, operator));
-  const expression = `${firstNumber} ${operator} ${secondNumber}`;
-  return [expression, rightAnswer];
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  return [question, rightAnswer];
 };
 
 export default () => runGameEngine(gameRule, generateGameData);

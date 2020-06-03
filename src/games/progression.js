@@ -2,21 +2,16 @@ import runGameEngine from '../index.js';
 import { getRandomInteger } from '../utils.js';
 
 const generateProgression = (start, step, length) => {
-  let counter = 0;
-  let element = 0;
   const progression = [];
-  while (counter < length) {
-    element = start + step * counter;
-    progression.push(element);
-    counter += 1;
+  for (let counter = 0; counter < length; counter += 1) {
+    progression.push(start + step * counter);
   }
   return progression;
 };
 
-const replaceProgressionElement = (progression, newElement = '..') => {
-  const index = getRandomInteger(1, progression.length);
-  const alteredProgression = [...progression];
-  const hiddenElement = progression[index];
+const replaceArrayElement = (array, index, newElement = '..') => {
+  const alteredProgression = [...array];
+  const hiddenElement = array[index];
   alteredProgression[index] = newElement;
   return [alteredProgression, hiddenElement];
 };
@@ -28,10 +23,11 @@ const generateGameData = () => {
   const step = getRandomInteger(2, 10);
   const length = 10;
   const progression = generateProgression(start, step, length);
-  const [alterdProgression, hiddenElement] = replaceProgressionElement(progression);
-  const currentValue = alterdProgression.join(' ');
+  const hiddenElementIndex = getRandomInteger(1, progression.length);
+  const [alterdProgression, hiddenElement] = replaceArrayElement(progression, hiddenElementIndex);
+  const question = alterdProgression.join(' ');
   const rightAnswer = String(hiddenElement);
-  return [currentValue, rightAnswer];
+  return [question, rightAnswer];
 };
 
 export default () => runGameEngine(gameRule, generateGameData);
