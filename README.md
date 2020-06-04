@@ -6,7 +6,7 @@
 </a>
 
 <a href="https://github.com/olegkuzmenko/frontend-project-lvl1/actions">
-  <img src="https://github.com/olegkuzmenko/frontend-project-lvl1/workflows/StartLint/badge" />
+  <img src="https://github.com/olegkuzmenko/frontend-project-lvl1/workflows/StartLint/badge.svg" />
 </a>
 
 **Brain Games** are five thrilling math games, that you can run right from the command line.
