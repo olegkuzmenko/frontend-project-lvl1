@@ -5,7 +5,7 @@ const operators = ['+', '-', '*'];
 
 const getRandomOperator = (array) => {
   const begin = 0;
-  const end = array.length;
+  const end = array.length - 1;
   return array[generateRandomInteger(begin, end)];
 };
 

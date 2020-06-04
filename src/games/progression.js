@@ -10,9 +10,9 @@ const generateProgression = (start, step, length) => {
 };
 
 const replaceArrayElement = (array, index, newElement = '..') => {
-  const alteredProgression = [...array];
-  alteredProgression[index] = newElement;
-  return alteredProgression;
+  const alteredArray = [...array];
+  alteredArray[index] = newElement;
+  return alteredArray;
 };
 
 const gameRule = 'What number is missing in the progression?';
@@ -22,7 +22,7 @@ const generateGameData = () => {
   const step = generateRandomInteger(2, 10);
   const length = 10;
   const progression = generateProgression(start, step, length);
-  const hiddenElementIndex = generateRandomInteger(1, progression.length);
+  const hiddenElementIndex = generateRandomInteger(1, progression.length - 1);
   const hiddenElement = progression[hiddenElementIndex];
   const alterdProgression = replaceArrayElement(progression, hiddenElementIndex);
   const question = alterdProgression.join(' ');
