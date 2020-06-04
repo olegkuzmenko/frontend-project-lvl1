@@ -1,5 +1,5 @@
-import runGameEngine from '../index.js';
-import { getRandomInteger, predicatToString } from '../utils.js';
+import runEngine from '../index.js';
+import { generateRandomInteger, booleanToStringAnswer } from '../utils.js';
 
 const isPrime = (integer) => {
   if (integer < 2) {
@@ -16,9 +16,9 @@ const isPrime = (integer) => {
 const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generateGameData = () => {
-  const question = getRandomInteger(1, 100);
-  const rightAnswer = predicatToString(isPrime(question));
+  const question = generateRandomInteger(1, 100);
+  const rightAnswer = booleanToStringAnswer(isPrime(question));
   return [question, rightAnswer];
 };
 
-export default () => runGameEngine(gameRule, generateGameData);
+export default () => runEngine(gameRule, generateGameData);

@@ -1,12 +1,12 @@
-import runGameEngine from '../index.js';
-import { getRandomInteger } from '../utils.js';
+import runEngine from '../index.js';
+import { generateRandomInteger } from '../utils.js';
 
-const listOfOperators = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
-const getRandomOperator = (operators) => {
+const getRandomOperator = (array) => {
   const begin = 0;
-  const end = operators.length;
-  return operators[getRandomInteger(begin, end)];
+  const end = array.length;
+  return array[generateRandomInteger(begin, end)];
 };
 
 const calculate = (firstNumber, secondNumber, operator) => {
@@ -25,12 +25,12 @@ const calculate = (firstNumber, secondNumber, operator) => {
 const gameRule = 'What is the result of the expression?';
 
 const generateGameData = () => {
-  const firstNumber = getRandomInteger(1, 100);
-  const secondNumber = getRandomInteger(1, 100);
-  const operator = getRandomOperator(listOfOperators);
+  const firstNumber = generateRandomInteger(1, 100);
+  const secondNumber = generateRandomInteger(1, 100);
+  const operator = getRandomOperator(operators);
   const rightAnswer = String(calculate(firstNumber, secondNumber, operator));
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   return [question, rightAnswer];
 };
 
-export default () => runGameEngine(gameRule, generateGameData);
+export default () => runEngine(gameRule, generateGameData);

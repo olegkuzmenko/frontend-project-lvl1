@@ -1,6 +1,6 @@
-export const getRandomInteger = (min, max) => {
-  const result = Math.floor(Math.random() * (max - min)) + min;
+export const generateRandomInteger = (min, max) => {
+  const result = Math.floor(Math.random() * (max + 1 - min)) + min;
   return result;
 };
 
-export const predicatToString = (boolean) => (boolean ? 'yes' : 'no');
+export const booleanToStringAnswer = (boolean) => (boolean ? 'yes' : 'no');

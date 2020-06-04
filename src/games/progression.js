@@ -1,5 +1,5 @@
-import runGameEngine from '../index.js';
-import { getRandomInteger } from '../utils.js';
+import runEngine from '../index.js';
+import { generateRandomInteger } from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];
@@ -11,23 +11,23 @@ const generateProgression = (start, step, length) => {
 
 const replaceArrayElement = (array, index, newElement = '..') => {
   const alteredProgression = [...array];
-  const hiddenElement = array[index];
   alteredProgression[index] = newElement;
-  return [alteredProgression, hiddenElement];
+  return alteredProgression;
 };
 
 const gameRule = 'What number is missing in the progression?';
 
 const generateGameData = () => {
-  const start = getRandomInteger(0, 100);
-  const step = getRandomInteger(2, 10);
+  const start = generateRandomInteger(0, 100);
+  const step = generateRandomInteger(2, 10);
   const length = 10;
   const progression = generateProgression(start, step, length);
-  const hiddenElementIndex = getRandomInteger(1, progression.length);
-  const [alterdProgression, hiddenElement] = replaceArrayElement(progression, hiddenElementIndex);
+  const hiddenElementIndex = generateRandomInteger(1, progression.length);
+  const hiddenElement = progression[hiddenElementIndex];
+  const alterdProgression = replaceArrayElement(progression, hiddenElementIndex);
   const question = alterdProgression.join(' ');
   const rightAnswer = String(hiddenElement);
   return [question, rightAnswer];
 };
 
-export default () => runGameEngine(gameRule, generateGameData);
+export default () => runEngine(gameRule, generateGameData);
