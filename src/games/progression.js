@@ -24,8 +24,8 @@ const generateGameData = () => {
   const progression = generateProgression(start, step, length);
   const hiddenElementIndex = generateRandomInteger(1, progression.length - 1);
   const hiddenElement = progression[hiddenElementIndex];
-  const alterdProgression = replaceArrayElement(progression, hiddenElementIndex);
-  const question = alterdProgression.join(' ');
+  const processedProgression = replaceArrayElement(progression, hiddenElementIndex);
+  const question = processedProgression.join(' ');
   const rightAnswer = String(hiddenElement);
   return [question, rightAnswer];
 };
