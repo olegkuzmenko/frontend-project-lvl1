@@ -5,8 +5,9 @@
   <img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" />
 </a>
 
-![StartLint](https://github.com/olegkuzmenko/frontend-project-lvl1/workflows/StartLint/badge.svg)
-
+<a href="https://github.com/olegkuzmenko/frontend-project-lvl1/actions">
+  <img src="https://github.com/olegkuzmenko/frontend-project-lvl1/workflows/StartLint/badge" />
+</a>
 
 **Brain Games** are five thrilling math games, that you can run right from the command line.
 
@@ -21,9 +22,11 @@ You need `node.js` to run Brain Games (version — 14.x).
 
 [How to install node.js](https://nodejs.org/en/download/package-manager/)
 
-Also you need `npm` to install Brain Games.
+You need `npm` to install Brain Games.
 
 [How to use and update npm](https://www.npmjs.com/get-npm)
+
+You also need `make` utility to start Brain Games.
 
 
 ## Discription
