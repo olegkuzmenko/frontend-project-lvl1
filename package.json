@@ -1,7 +1,7 @@
 {
-  "name": "frontend-project-lvl1",
+  "name": "@olegkuzmenko/frontend-project-lvl1",
   "version": "3.0.0",
-  "description": "Brain Games",
+  "description": "Brain Games are five thrilling math games, that you can run right from the command line.",
   "bin": {
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",

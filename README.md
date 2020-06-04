@@ -33,28 +33,28 @@ You also need `make` utility to start Brain Games.
 
 **Evenness check** — answer, whether the proposed number is even or not. To play Evennes check type `brain-even` in command line.
 
-<a href="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG" target="_blank"><img src="https://asciinema.org/a/kLgDzQzIKm6g0Uy9dUJVxVjJG.svg" /></a>
+<a href="https://asciinema.org/a/GzT6KKA41IT92vXOuFjveNhqT" target="_blank"><img src="https://asciinema.org/a/GzT6KKA41IT92vXOuFjveNhqT.svg" /></a>
 
 
 **Calculator** — do the math in your mind. To play Calculator type `brain-calc` in command line.
 
-<a href="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn" target="_blank"><img src="https://asciinema.org/a/H5hoqNWaHFUTQkW8j7GuwWumn.svg" /></a>
+<a href="https://asciinema.org/a/F1FQgRdotdYloNtQizQ0urMOu" target="_blank"><img src="https://asciinema.org/a/F1FQgRdotdYloNtQizQ0urMOu.svg" /></a>
 
 
 **GCD** — find the greatest common devisor for two numbers. To play GCD type `brain-gcd` in command line.
 
-<a href="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd" target="_blank"><img src="https://asciinema.org/a/oQVCvLYwV9uPiVFNYLrQ46IJd.svg" /></a>
+<a href="https://asciinema.org/a/0ZtbNptbbsQeFRMEGCZSiMSgB" target="_blank"><img src="https://asciinema.org/a/0ZtbNptbbsQeFRMEGCZSiMSgB.svg" /></a>
 
 
 **Progression** — answer, what number is missing in the arithmetic progression sequence. To play Progression type `brain-progression` in command line.
 
-<a href="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S" target="_blank"><img src="https://asciinema.org/a/cl1nxFOKKqh7L41grPVvJvl1S.svg" /></a>
+<a href="https://asciinema.org/a/CLpYvGD9uzxN2kVZanRZpXEWD" target="_blank"><img src="https://asciinema.org/a/CLpYvGD9uzxN2kVZanRZpXEWD.svg" /></a>
 
 
 **Prime or not** — guess, if the number is prime, or not. To play Prime or not type `brain-prime` in command line.
 
 
-<a href="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW" target="_blank"><img src="https://asciinema.org/a/M3bZOj6wKvWPSilyc3rD4WwXW.svg" /></a>
+<a href="https://asciinema.org/a/3MPTDcZBRz0ZCpuFbEVhfKbxy" target="_blank"><img src="https://asciinema.org/a/3MPTDcZBRz0ZCpuFbEVhfKbxy.svg" /></a>
 
 
 
