@@ -12,7 +12,7 @@
 **Brain Games** are five thrilling math games, that you can run right from the command line.
 
 ## Installation ##
-To install Brain Games, cope the repository to your working directory, paste this code in the command line and then press `Enter`:
+To install Brain Games, copy the repository to your working directory, paste this code in the command line and then press `Enter`:
 
 ```make start```
 
